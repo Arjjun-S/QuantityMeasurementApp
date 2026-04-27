@@ -1,3 +1,3 @@
 # QuantityMeasurementApp
-### version 1.5
-### UC5 - Unit-to-Unit Conversion (Same Measurement Type)
+### version 1.6
+### UC6: Addition of Two Length Units (Same Category)
