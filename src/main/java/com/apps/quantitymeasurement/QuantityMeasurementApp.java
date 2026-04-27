@@ -1,39 +1,48 @@
 package com.apps.quantitymeasurement;
-
-import java.util.Objects;
-
 public class QuantityMeasurementApp {
-
     public static class Feet {
         private final double value;
 
         public Feet(double value) {
             this.value = value;
         }
-
         @Override
-        public boolean equals(Object o) {
-            // 1. Reference Check
-            if (this == o) return true;
-
-            // 2. Null and Type Check
-            if (o == null || getClass() != o.getClass()) return false;
-
-            // 3. Cast and Value Comparison
-            Feet feet = (Feet) o;
+        public boolean equals(Object obj) {
+            if (this == obj) return true;
+            if (obj == null || getClass() != obj.getClass()) return false;
+            Feet feet = (Feet) obj;
             return Double.compare(feet.value, value) == 0;
         }
+    }
+    public static class Inches {
+        private final double value;
+
+        public Inches(double value) {
+            this.value = value;
+        }
 
         @Override
-        public int hashCode() {
-            return Objects.hash(value);
+        public boolean equals(Object obj) {
+            if (this == obj) return true;
+            if (obj == null || getClass() != obj.getClass()) return false;
+            Inches inches = (Inches) obj;
+            return Double.compare(inches.value, value) == 0;
         }
     }
-
-    public static void main(String[] args) {
+    public static void demonstrateFeetEquality() {
         Feet f1 = new Feet(1.0);
         Feet f2 = new Feet(1.0);
         System.out.println("Input: 1.0 ft and 1.0 ft");
         System.out.println("Output: Equal (" + f1.equals(f2) + ")");
+    }
+    public static void demonstrateInchesEquality() {
+        Inches i1 = new Inches(1.0);
+        Inches i2 = new Inches(1.0);
+        System.out.println("Input: 1.0 inch and 1.0 inch");
+        System.out.println("Output: Equal (" + i1.equals(i2) + ")");
+    }
+    public static void main(String[] args) {
+        demonstrateFeetEquality();
+        demonstrateInchesEquality();
     }
 }
