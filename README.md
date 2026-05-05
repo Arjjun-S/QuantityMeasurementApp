@@ -1,3 +1,3 @@
 # QuantityMeasurementApp
-### version 1.1
-### UC1: Feet measurement equality
+### version 1.2
+### UC2 - Feet and Inches measurement equality
