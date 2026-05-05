@@ -11,16 +11,16 @@ public class QuantityMeasurementAppTest {
         assertTrue(QuantityMeasurementApp.demonstrateLengthComparison(1.0, LengthUnit.FEET, 1.0, LengthUnit.FEET));
     }
     @Test
-    public void testInchesEquality() {
-        assertTrue(QuantityMeasurementApp.demonstrateLengthComparison(1.0, LengthUnit.INCHES, 1.0, LengthUnit.INCHES));
-    }
-    @Test
     public void testFeetInchesComparison() {
         assertTrue(QuantityMeasurementApp.demonstrateLengthComparison(1.0, LengthUnit.FEET, 12.0, LengthUnit.INCHES));
     }
     @Test
     public void yardEquals36Inches() {
         assertTrue(QuantityMeasurementApp.demonstrateLengthComparison(1.0, LengthUnit.YARDS, 36.0, LengthUnit.INCHES));
+    }
+    @Test
+    public void testInchesEquality() {
+        assertTrue(QuantityMeasurementApp.demonstrateLengthComparison(1.0, LengthUnit.INCHES, 1.0, LengthUnit.INCHES));
     }
     @Test
     public void centimeterEquals39Point3701Inches() {
