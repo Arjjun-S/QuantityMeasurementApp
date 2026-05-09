@@ -63,9 +63,6 @@ public class QuantityMeasurementApp {
     public static boolean demonstrateLengthComparison(double v1, Length.LengthUnit u1, double v2, Length.LengthUnit u2) {
         return demonstrateLengthEquality(new Length(v1, u1), new Length(v2, u2));
     }
-    public static Length demonstrateLengthConversion(double value, Length.LengthUnit from, Length.LengthUnit to) {
-        return new Length(value, from).convertTo(to);
-    }
     public static Length demonstrateLengthAddition(Length l1, Length l2) {
         Length result = l1.add(l2);
         System.out.println("Adding: " + l1 + " + " + l2 + " = " + result);
@@ -73,6 +70,9 @@ public class QuantityMeasurementApp {
     }
     public static Length demonstrateLengthConversion(Length length, Length.LengthUnit to) {
         return length.convertTo(to);
+    public static Length demonstrateLengthConversion(double value, Length.LengthUnit from, Length.LengthUnit to) {
+        return new Length(value, from).convertTo(to);
+    }
     }
     public static void main(String[] args) {
         demonstrateLengthComparison(1.0, Length.LengthUnit.FEET, 12.0, Length.LengthUnit.INCHES);

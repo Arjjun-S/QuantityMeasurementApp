@@ -1,3 +1,3 @@
 # QuantityMeasurementApp
-### version 1.7
-### UC7: Addition with Target Unit Specification
+### version 1.8
+### UC8: Refactoring Unit Enum to Standalone
