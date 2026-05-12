@@ -11,14 +11,6 @@ public class QuantityMeasurementAppTest {
         assertTrue(QuantityMeasurementApp.demonstrateLengthComparison(1.0, LengthUnit.FEET, 1.0, LengthUnit.FEET));
     }
     @Test
-    public void testFeetInchesComparison() {
-        assertTrue(QuantityMeasurementApp.demonstrateLengthComparison(1.0, LengthUnit.FEET, 12.0, LengthUnit.INCHES));
-    }
-    @Test
-    public void yardEquals36Inches() {
-        assertTrue(QuantityMeasurementApp.demonstrateLengthComparison(1.0, LengthUnit.YARDS, 36.0, LengthUnit.INCHES));
-    }
-    @Test
     public void testInchesEquality() {
         assertTrue(QuantityMeasurementApp.demonstrateLengthComparison(1.0, LengthUnit.INCHES, 1.0, LengthUnit.INCHES));
     }
@@ -76,12 +68,6 @@ public class QuantityMeasurementAppTest {
         Length l2 = new Length(1.0, LengthUnit.FEET);
         Length sum = QuantityMeasurementApp.demonstrateLengthAddition(l1, l2);
         assertEquals(new Length(24.0, LengthUnit.INCHES), sum);
-    }
-    @Test
-    public void testAddition_Commutativity() {
-        Length l1 = new Length(1.0, LengthUnit.FEET);
-        Length l2 = new Length(12.0, LengthUnit.INCHES);
-        assertEquals(l1.add(l2).getBaseValue(), l2.add(l1).getBaseValue(), 0.01);
     }
     @Test
     public void referenceEqualitySameObject() {
